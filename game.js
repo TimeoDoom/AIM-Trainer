@@ -28,7 +28,7 @@ function position() {
 
   if (Math.random() < 0.2) {
     // 20% de chances d'apparition d'une cible piégée
-    target.style.backgroundColor = "rgb(255, 52, 52)"; // couleur de la cible piégée
+    target.style.backgroundColor = "rgb(0, 0, 255)"; // couleur de la cible piégée
     // Masquer la cible bleue après 2 secondes
     setTimeout(() => {
       target.style.display = "none";
