@@ -104,7 +104,7 @@ gameArea.addEventListener("click", function (event) {
   if (distance > targetRect.width / 2) {
     // Si le clic est en dehors de la cible, ne rien faire
   } else {
-    if (targetColor === "rgb(255, 52, 52)") {
+    if (targetColor === "rgb(0, 0, 255)") {
       // Si la cible cliquée est de couleur bleue (piégée), décrémenter le score
       pointsDeLaPartie.innerHTML = points -= 1;
       popUp.style.display = "block";
