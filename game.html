@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>AIM trainer</title>
+  </head>
+  <body>
+    <section class="playd" style="-webkit-backdrop-filter: blur(10px)">
+      <div class="buttons">
+        <button id="playButton">Jouer</button>
+        <div class="time">
+          <p>Durée :</p>
+          <input type="number" min="1" id="tentacles" name="tentacles" />
+        </div>
+      </div>
+    </section>
+
+    <section class="endGame" style="-webkit-backdrop-filter: blur(10px)">
+      <div class="EndButtonText">
+        <h1>
+          Fin du temps votre score est de : <span class="pointsFin"></span>
+        </h1>
+        <input
+          type="button"
+          value="Rejouer"
+          class="refrechButton"
+          onclick="history.go(0)"
+        />
+      </div>
+    </section>
+
+    <section class="popUp" style="-webkit-backdrop-filter: blur(10px)">
+      <div class="pub">
+        <div class="rect">
+          <img src="./assets/raté.jpg" alt="" />
+        </div>
+        <input
+          type="button"
+          value="Fermer"
+          class="refrechButton"
+          onclick="history.go(0)"
+        />
+      </div>
+    </section>
+
+    <section class="gameArea">
+      <div id="targetArea" class="area">
+        <div class="target"></div>
+        <div class="target-popo-up"></div>
+      </div>
+
+      <section class="stats">
+        <div class="precision">
+          <p>Précision :</p>
+          <span class="pourcent"></span>
+        </div>
+        <div class="score">
+          <p>Score :</p>
+          <span class="pointsDeLaPartie"></span>
+        </div>
+      </section>
+    </section>
+    <script src="./game.js"></script>
+  </body>
+</html>
