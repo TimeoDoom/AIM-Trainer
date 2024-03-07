@@ -1,0 +1,210 @@
+body {
+  backdrop-filter: blur(10px);
+}
+
+* {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 0;
+}
+.center-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+
+/* Les mixines */
+
+@mixin placement {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 2px solid #565656;
+  background: #0d0d0d;
+  width: 146px;
+  height: 53px;
+  border-radius: 7px;
+  font-size: 18px;
+}
+
+.playd {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #0000001a;
+
+  .buttons {
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+    transform: translateX(50%);
+    margin-top: -70px;
+
+    #playButton {
+      @include placement();
+      cursor: pointer;
+    }
+
+    .time {
+      @include placement();
+      font-size: 17px;
+
+      input {
+        background-color: #0d0d0d;
+        height: 20px;
+        width: 35px;
+        padding: 5px;
+        border: none;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.endGame {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #0000001a;
+  display: none;
+  align-items: center;
+
+  .EndButtonText {
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+    transform: translateX(50%);
+    margin-top: -100px;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    .refrechButton {
+      @include placement();
+      cursor: pointer;
+      margin: auto;
+    }
+
+    .pointsFin {
+      font-weight: bold;
+    }
+  }
+}
+
+.popUp {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #0000001a;
+  display: none;
+  align-items: center;
+
+  .pub {
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+    transform: translateX(50%);
+    margin-top: -300px;
+
+    .rect {
+      margin-bottom: 50px;
+      width: 900px;
+      height: 500px;
+      border-radius: 20px;
+
+      img {
+        margin: auto;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    .refrechButton {
+      @include placement();
+      cursor: pointer;
+      margin: auto;
+    }
+  }
+}
+
+.gameArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 100px 160px;
+  flex-wrap: wrap;
+
+  .area {
+    width: 70%;
+    height: 500px;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid #565656;
+    background: #000000;
+
+    .target {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 30px;
+    }
+  }
+
+  .stats {
+    margin-top: 20px;
+
+    .precision {
+      @include placement();
+      margin-bottom: 10px;
+    }
+    .score {
+      @include placement();
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .gameArea {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 160px;
+
+    .area {
+      width: 500px;
+      height: 500px;
+      margin: auto;
+    }
+    .stats {
+      justify-content: center;
+      margin: 30px auto;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .gameArea {
+    .area {
+      width: 200px;
+      height: 350px;
+      margin: auto;
+    }
+  }
+}

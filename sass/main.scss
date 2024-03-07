@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600&display=swap");
+@import "play.scss";
+
+/* Scss reset */
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Mixin */
+
+@mixin button($WidthButtonSize, $HeightButtonSize) {
+  width: $WidthButtonSize;
+  height: $HeightButtonSize;
+  border-radius: 10px;
+  border: 2px solid #282828;
+  background: #0d0d0d;
+}
+
+@mixin textstyle($size) {
+  color: #fff;
+  text-align: center;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 400;
+  font-size: $size;
+}
+
+@mixin buttoncontents {
+  justify-content: center;
+  gap: 33px;
+}
+
+/* main style */
+
+h1 {
+  @include textstyle(64px);
+  margin: 50px 0px 50px 0;
+}
+
+.buttons {
+  @include buttoncontents();
+  display: grid;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  button {
+    @include button(200px, 100px);
+    @include textstyle(30px);
+    @include buttoncontents();
+    display: flex;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .shape {
+      width: 40px;
+      transform: rotate(90deg);
+      background-color: #00366d;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    @include textstyle(48px);
+    margin: 50px 0px 50px 0;
+  }
+}
