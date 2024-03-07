@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600&display=swap");
+body {
+  backdrop-filter: blur(10px);
+}
+
+* {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 0;
+}
+
+.center-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 50px;
+}
+
+/* Les mixines */
+.playd {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1019607843);
+}
+.playd .buttons {
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%);
+  transform: translateX(50%);
+  margin-top: -70px;
+}
+.playd .buttons #playButton {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 2px solid #565656;
+  background: #0d0d0d;
+  width: 146px;
+  height: 53px;
+  border-radius: 7px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.playd .buttons .time {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 2px solid #565656;
+  background: #0d0d0d;
+  width: 146px;
+  height: 53px;
+  border-radius: 7px;
+  font-size: 18px;
+  font-size: 17px;
+}
+.playd .buttons .time input {
+  background-color: #0d0d0d;
+  height: 20px;
+  width: 35px;
+  padding: 5px;
+  border: none;
+  font-size: 14px;
+}
+
+.endGame {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1019607843);
+  display: none;
+  align-items: center;
+}
+.endGame .EndButtonText {
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%);
+  transform: translateX(50%);
+  margin-top: -100px;
+}
+.endGame .EndButtonText h1 {
+  font-size: 40px;
+}
+.endGame .EndButtonText .refrechButton {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 2px solid #565656;
+  background: #0d0d0d;
+  width: 146px;
+  height: 53px;
+  border-radius: 7px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: auto;
+}
+.endGame .EndButtonText .pointsFin {
+  font-weight: bold;
+}
+
+.popUp {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1019607843);
+  display: none;
+  align-items: center;
+}
+.popUp .pub {
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%);
+  transform: translateX(50%);
+  margin-top: -300px;
+}
+.popUp .pub .rect {
+  margin-bottom: 50px;
+  width: 900px;
+  height: 500px;
+  border-radius: 20px;
+}
+.popUp .pub .rect img {
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.popUp .pub .refrechButton {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 2px solid #565656;
+  background: #0d0d0d;
+  width: 146px;
+  height: 53px;
+  border-radius: 7px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: auto;
+}
+
+.gameArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 100px 160px;
+  flex-wrap: wrap;
+}
+.gameArea .area {
+  width: 70%;
+  height: 500px;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid #565656;
+  background: #000000;
+}
+.gameArea .area .target {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 30px;
+}
+.gameArea .stats {
+  margin-top: 20px;
+}
+.gameArea .stats .precision {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 2px solid #565656;
+  background: #0d0d0d;
+  width: 146px;
+  height: 53px;
+  border-radius: 7px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.gameArea .stats .score {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 2px solid #565656;
+  background: #0d0d0d;
+  width: 146px;
+  height: 53px;
+  border-radius: 7px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 970px) {
+  .gameArea {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 160px;
+  }
+  .gameArea .area {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+  }
+  .gameArea .stats {
+    justify-content: center;
+    margin: 30px auto;
+  }
+}
+@media (max-width: 550px) {
+  .gameArea .area {
+    width: 200px;
+    height: 350px;
+    margin: auto;
+  }
+}
+/* Scss reset */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Mixin */
+/* main style */
+h1 {
+  color: #fff;
+  text-align: center;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  margin: 50px 0px 50px 0;
+}
+
+.buttons {
+  justify-content: center;
+  gap: 33px;
+  display: grid;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.buttons button {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  border: 2px solid #282828;
+  background: #0d0d0d;
+  color: #fff;
+  text-align: center;
+  font-family: "Kantumruy Pro", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  justify-content: center;
+  gap: 33px;
+  display: flex;
+  align-items: center;
+}
+.buttons button a {
+  text-decoration: none;
+  color: white;
+}
+.buttons button .shape {
+  width: 40px;
+  transform: rotate(90deg);
+  background-color: #00366d;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    color: #fff;
+    text-align: center;
+    font-family: "Kantumruy Pro", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    margin: 50px 0px 50px 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
